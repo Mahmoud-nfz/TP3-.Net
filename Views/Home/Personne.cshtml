@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Liste Des Personnes";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<div class="container">
+    <div class="row">
+
+        @foreach (var item in ViewBag.resultTable)
+        {
+            <div class="col mb-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="@item.Image" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.FirstName @item.LastName</h5>
+                        <p>Email : @item.Email</p>
+                        <p>Country : @item.Country</p>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
